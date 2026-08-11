@@ -1,0 +1,18 @@
+{
+"name": "my-story-time",
+ "version": "1.0.0",
+  "description": "A personalised storytelling website built with Node.js, Express, vanilla JavaScript and CSS.",
+  "type": "module",
+  "main": "server.js",
+
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "maceplus@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
