@@ -1,0 +1,40 @@
+.hero {
+  display: grid;
+  min-height: calc(100vh - 72px);
+  place-items: center;
+  padding: var(--space-md);
+}
+
+.hero_content {
+  width: min(100%, 800px);
+  text-align: center;
+}
+
+.hero_eyebrow {
+  margin-bottom: var(--space-sm);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+}
+
+.hero h2 {
+  margin-top: var(--space-md);
+  font-size: clamp(1.5rem, 4vw, var(--font-size-lg));
+}
+
+.hero_highlight {
+  color: var(--color-primary);
+}
+
+.hero_description {
+  max-width: 600px;
+  margin: var(--space-sm) auto 0;
+  font-size: var(--font-size-md);
+}

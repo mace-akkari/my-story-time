@@ -60,11 +60,9 @@ body {
   --shadow-card: 0 15px 40px rgba(63, 42, 29, 0.12);
 }
 
-
 /* ==========================
    BASE ELEMENTS
 ========================== */
-
 
 body {
   background: var(--color-background);
@@ -86,4 +84,44 @@ a {
 
 button {
   cursor: pointer;
+}
+
+/* ==========================
+   REUSABLE COMPONENTS
+========================== */
+
+.button {
+  display: inline-block;
+  border-radius: var(--radius-lg);
+  padding: 0.875rem 2rem;
+  font-weight: 700;
+  transition:
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button_primary {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.button_primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.button_primary:focus-visible {
+  outline: 3px solid var(--color-heading);
+  outline-offset: 4px;
+}
+
+.site-footer {
+  display: grid;
+  min-height: 72px;
+  place-items: center;
+  padding: var(--space-sm);
+  font-size: var(--font-size-xs);
 }
