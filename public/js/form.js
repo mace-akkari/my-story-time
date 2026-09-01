@@ -61,10 +61,10 @@ function handleFormSubmit(event) {
 
   const form = event.target;
   const formData = new FormData(form);
-
   const answers = Object.fromEntries(formData.entries());
 
-  console.log(answers);
+  localStorage.setItem("storyAnswers", JSON.stringify(answers));
+  window.location.href = "/football-story.html";
 }
 
 async function initialisePage() {
