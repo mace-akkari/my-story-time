@@ -1,5 +1,5 @@
 import express from "express";
-import { footballFields } from "../data/stories/football.js";
+import { footballFields, footballStory } from "../data/stories/football.js";
 
 const router = express.Router();
 
@@ -8,6 +8,7 @@ const stories = {
     id: "football",
     title: "Football Hero",
     fields: footballFields,
+    template: footballStory,
   },
 };
 
