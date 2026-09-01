@@ -47,18 +47,33 @@ function createFormField(field) {
 
 function renderForm(fields) {
   const form = document.querySelector(".story_form");
+  const submitButton = form.querySelector("button");
 
   fields.forEach((field) => {
     const formField = createFormField(field);
 
-    form.appendChild(formField);
+    form.insertBefore(formField, submitButton);
   });
+}
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  const answers = Object.fromEntries(formData.entries());
+
+  console.log(answers);
 }
 
 async function initialisePage() {
   const story = await fetchStory();
 
   renderForm(story.fields);
+
+  const form = document.querySelector(".story_form");
+  form.addEventListener("submit", handleFormSubmit);
 }
 
 initialisePage();
